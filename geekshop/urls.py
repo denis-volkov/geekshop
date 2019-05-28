@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+import mainapp.views as mainapp
 
 urlpatterns = [
+    path('', mainapp.main),
+    path('products/', mainapp.products),
+    path('products/azimut_80/', mainapp.azimut_80),
+    path('products/azimut_120sl/', mainapp.azimut_120sl),
+    path('products/benetti_veloce_140/', mainapp.benetti_veloce_140),
+    path('contact/', mainapp.contact),
     path('admin/', admin.site.urls),
 ]
